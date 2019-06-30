@@ -5,19 +5,23 @@ function addToCart(i) {
 	if (pCheck) {
 		products = JSON.parse(products);
 	}
-	if (products['item' + i]) {
-		item = products['item' + i];
+	if (products[i]) {
+		item = products[i];
 		item.count++;
 		item.inCart = true;
-		products['item' + i] = item;
-		pString = JSON.stringify(products);
-		localStorage.setItem('products', pString);
+		this.setDataToLocalStorage(i, item, products);
 	} else {
-		item = {count: 0, inCart: false};
-		products['item' + i] = item;
-		pString = JSON.stringify(products);
-		localStorage.setItem('products', pString);
+		item = {count: 1, inCart: true};
+		this.setDataToLocalStorage(i, item, products);
 	}
+}
+
+function setDataToLocalStorage(i, item, products){
+	products[i] = item;
+	console.log(products);
+	pString = JSON.stringify(products);
+	console.log(pString);
+	localStorage.setItem('products', pString);
 }
 
 function cartCount() {
