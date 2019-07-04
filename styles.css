@@ -40,6 +40,7 @@ img {
 
 .card {
     margin: 24px;
+    /* padding-bottom: 10px; */
     border-radius: 4px;
     align-items: center;
     display: flex;
@@ -52,13 +53,13 @@ img {
 }
 
 #main-content {
-    place-content: start space-around;
-    width: 60%;
-    align-self: center;
-    ;
+    place-content: start;
+    width: 100vw;
     display: flex;
-    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
     height: calc(100vh - 120px);
+    overflow-y: auto;
 }
 
 
