@@ -5,6 +5,10 @@
     <title>SELISE School Shop</title>
     <link rel="stylesheet" href="./styles.css">
 </head>
+<script src="vars.js"></script>
+<script src="localStorage.js"></script>
+<script src="utils.js"></script>
+
 <body onload="cartCount()">
     <nav id="navbar">
         <div style="place-content: center">
@@ -22,14 +26,12 @@
     <div class="modal">
         <div class="modal-content">
             <span class="close-button">×</span>
-            <div id="cartModal">
+            <div id="cartModal" style="margin: 20px; overflow-y: auto; overflow-x: hidden">
 
             </div>
         </div>
     </div>
 
-<script src="localStorage.js"></script>
-<script src="vars.js"></script>
 <script src="modal.js"></script>
 <script src="index.js"></script>
 </body>

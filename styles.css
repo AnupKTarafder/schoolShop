@@ -3,7 +3,7 @@ body {
     display: flex;
     flex-direction: column;
     overflow: hidden;
-    font-family: 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Times New Roman', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 #navbar {
@@ -82,7 +82,7 @@ position: fixed;
     right: 0;
     background-color: white;
     padding: 1rem 1.5rem;
-    width: 350px;
+    width: 400px;
     border-radius: 0.5rem;
     /* animation: cubic-bezier(0.075, 0.82, 0.165, 1) s; */
 }
@@ -135,4 +135,10 @@ button {
     transform: translate3d(0,0,0);
     transition: background .4s cubic-bezier(.25,.8,.25,1),box-shadow 280ms cubic-bezier(.4,0,.2,1);
 
+}
+
+button.inCart{
+    background-color: rgb(175, 171, 171);
+    cursor: no-drop !important;
+    pointer-events: none;
 }
